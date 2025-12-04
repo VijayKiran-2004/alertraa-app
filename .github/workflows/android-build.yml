@@ -31,13 +31,6 @@ jobs:
         working-directory: ./AlertraaAndroid
         run: npm install --legacy-peer-deps
 
-      - name: Generate Android folder
-        working-directory: ./AlertraaAndroid
-        run: |
-          npx react-native init TempApp --skip-install
-          cp -r TempApp/android ./android
-          rm -rf TempApp
-
       - name: Make Gradlew executable
         working-directory: ./AlertraaAndroid/android
         run: chmod +x gradlew
