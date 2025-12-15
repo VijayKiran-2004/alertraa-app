@@ -20,7 +20,7 @@ const withPWA = withPWAInit({
     },
     {
       urlPattern: /^https?.*/,
-      handler: 'StaleWhileRevalidate',
+      handler: 'NetworkFirst',
       options: {
         cacheName: 'https-calls',
         networkTimeoutSeconds: 15,
@@ -42,8 +42,6 @@ const withPWA = withPWAInit({
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/alertraa-app' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/alertraa-app/' : '',
   images: {
     unoptimized: true,
     remotePatterns: [

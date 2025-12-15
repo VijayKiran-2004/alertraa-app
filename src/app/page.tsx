@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { MessageCircle } from 'lucide-react';
 
-import { notifyEmergencyContacts } from '@/ai/flows/emergency-contact-notification';
+// import { notifyEmergencyContacts } from '@/ai/flows/emergency-contact-notification'; // Disabled for static export
 import { mockData } from '@/lib/mock-data';
 import type {
   Emergency,

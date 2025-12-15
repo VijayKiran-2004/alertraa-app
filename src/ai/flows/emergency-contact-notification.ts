@@ -1,4 +1,4 @@
-'use server';
+// 'use server'; // Disabled for static export
 
 /**
  * @fileOverview Notifies emergency contacts based on user's SOS initiation.

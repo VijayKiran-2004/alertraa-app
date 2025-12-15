@@ -1,4 +1,4 @@
-'use server';
+// 'use server'; // Disabled for static export
 
 /**
  * @fileOverview This file defines a Genkit flow for querying a user's health summary.

@@ -1,4 +1,4 @@
-'use server';
+// 'use server'; // Disabled for static export
 
 /**
  * @fileOverview An AI agent that provides personalized health recommendations based on user data.

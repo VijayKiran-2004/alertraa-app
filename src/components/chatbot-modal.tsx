@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { X, Send, AlertCircle } from 'lucide-react';
-import { healthSummaryQuery } from '@/ai/flows/health-summary-query';
+// import { healthSummaryQuery } from '@/ai/flows/health-summary-query'; // Disabled for static export
 import { cn } from '@/lib/utils';
 
 interface ChatbotModalProps {
@@ -78,9 +78,12 @@ export default function ChatbotModal({ onClose, isDarkMode }: ChatbotModalProps)
     }
 
     try {
-      const aiResponseText = await healthSummaryQuery(query);
-      const aiResponse: Message = { role: 'ai', text: aiResponseText };
-      setMessages(prev => [...prev, aiResponse]);
+      // AI disabled for static export - use predefined responses
+      const errorResponse: Message = { role: 'ai', text: "AI assistant is currently unavailable in this deployment. Please try the predefined questions above." };
+      setMessages(prev => [...prev, errorResponse]);
+      // const aiResponseText = await healthSummaryQuery(query);
+      // const aiResponse: Message = { role: 'ai', text: aiResponseText };
+      // setMessages(prev => [...prev, aiResponse]);
     } catch (error) {
       console.error('Error fetching from AI assistant:', error);
       const errorResponse: Message = { role: 'ai', text: "There was an error connecting to the health assistant. Please try again later." };
