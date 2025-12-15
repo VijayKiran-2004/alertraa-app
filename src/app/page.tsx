@@ -89,9 +89,8 @@ export default function App() {
     // Default to light theme
     setIsDarkMode(false);
     
-    setTimeout(() => {
-      setAppLoading(false);
-    }, 1500);
+    // Set loading to false immediately for static export
+    setAppLoading(false);
 
   }, []);
   
